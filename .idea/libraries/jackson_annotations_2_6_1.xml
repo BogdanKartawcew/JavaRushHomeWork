@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jackson-annotations-2.6.1">
+    <CLASSES>
+      <root url="jar://E:/New Program Files/Jackson framework/jackson-annotations-2.6.1.jar!/" />
+      <root url="jar://E:/New Program Files/Jackson framework/jackson-core-2.6.1.jar!/" />
+      <root url="jar://E:/New Program Files/Jackson framework/jackson-databind-2.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
