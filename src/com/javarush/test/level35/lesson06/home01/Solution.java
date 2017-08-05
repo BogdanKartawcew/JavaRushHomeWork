@@ -6,17 +6,17 @@ package com.javarush.test.level35.lesson06.home01;
 T должен быть наследником класса ClassForGenerics и одновременно реализовывать интерфейс InterfaceForGenerics.
 Менять можно только класс Solution.
 */
-public class Solution<T> {
+public class Solution<T extends ClassForGenerics & InterfaceForGenerics> {
     public static void main(String[] args) {
         Solution<TestClassGood> testClassSolution = new Solution<>();
         testClassSolution.check();
 
         //!!! Следующие оба варианта не должны работать:
-        Solution<TestClassWrong1> wrong1Solution = new Solution<>();
+        /*Solution<TestClassWrong1> wrong1Solution = new Solution<>();
         wrong1Solution.check();
 
         Solution<TestClassWrong2> wrong2Solution = new Solution<>();
-        wrong2Solution.check();
+        wrong2Solution.check();*/
     }
 
     public void check() {
