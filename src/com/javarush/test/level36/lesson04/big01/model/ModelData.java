@@ -1,14 +1,12 @@
 package com.javarush.test.level36.lesson04.big01.model;
 
-
 import com.javarush.test.level36.lesson04.big01.bean.User;
 
 import java.util.List;
 
-/*ModelData - это объект, который будет хранить необходимые данные для отображения на клиенте.*/
 public class ModelData
 {
-    private List<User> users; //список юзеров для отображения
+    private List<User> users;
 
     public List<User> getUsers()
     {
