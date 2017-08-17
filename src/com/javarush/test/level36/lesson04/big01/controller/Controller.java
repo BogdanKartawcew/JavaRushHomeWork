@@ -28,6 +28,11 @@ public class Controller
         usersView.refresh(model.getModelData());
     }
 
+    public void onOpenUserEditForm(long userId) {
+    model.loadUserById(userId);
+    usersView.refresh(model.getModelData());
+    }
+
 
 
     public void setUsersView(UsersView usersView)

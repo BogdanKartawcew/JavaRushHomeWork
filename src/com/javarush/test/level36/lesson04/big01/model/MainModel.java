@@ -27,9 +27,17 @@ public class MainModel implements Model
 
     private UserService userService = new UserServiceImpl();
 
-    public void loadDeletedUsers() {
+    public void loadDeletedUsers()
+    {
         modelData.setDisplayDeletedUserList(true);
         List<User> users = userService.getAllDeletedUsers();
         modelData.setUsers(users);
+    }
+
+    @Override
+    public void loadUserById(long userId)
+    {
+        User user = userService.getUsersById(userId);
+        modelData.setActiveUser(user);
     }
 }
