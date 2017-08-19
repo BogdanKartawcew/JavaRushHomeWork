@@ -4,13 +4,17 @@ import com.javarush.test.level36.lesson04.big01.bean.User;
 
 import java.util.List;
 
-public class ModelData
-{
+/**
+ * ModelData - это объект, который будет хранить необходимые данные для отображения на клиенте
+ */
+public class ModelData {
+
     private List<User> users;
     private User activeUser;
     private boolean displayDeletedUserList;
 
 
+    //getters and setters
     public List<User> getUsers() {
         return users;
     }
