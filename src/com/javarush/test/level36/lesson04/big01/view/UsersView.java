@@ -6,8 +6,6 @@ import com.javarush.test.level36.lesson04.big01.model.ModelData;
 
 public class UsersView implements View
 {
-    private Controller controller;
-
     @Override
     public void refresh(ModelData modelData)
     {
@@ -31,6 +29,8 @@ public class UsersView implements View
         this.controller = controller;
     }
 
+    private Controller controller;
+
     public void fireEventShowAllUsers()
     {
         controller.onShowAllUsers();
@@ -39,9 +39,5 @@ public class UsersView implements View
     public void fireEventShowDeletedUsers()
     {
         controller.onShowAllDeletedUsers();
-    }
-
-    public void fireEventOpenUserEditForm(long id) {
-    controller.onOpenUserEditForm(id);
     }
 }

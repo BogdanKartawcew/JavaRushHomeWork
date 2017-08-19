@@ -8,12 +8,6 @@ public class Controller
 {
     private UsersView usersView;
     private Model model;
-
-    public void setEditUserView(EditUserView editUserView)
-    {
-        this.editUserView = editUserView;
-    }
-
     private EditUserView editUserView;
 
     public void onShowAllUsers()
@@ -22,26 +16,24 @@ public class Controller
         usersView.refresh(model.getModelData()); //Пойди в контроллер и добавь обновление данных во Вью.
     }
 
-    public void onShowAllDeletedUsers()
-    {
-        model.loadDeletedUsers();
-        usersView.refresh(model.getModelData());
-    }
-
-    public void onOpenUserEditForm(long userId) {
-    model.loadUserById(userId);
-    usersView.refresh(model.getModelData());
-    }
-
-
-
     public void setUsersView(UsersView usersView)
     {
         this.usersView = usersView;
     }
 
+    public void setEditUserView(EditUserView editUserView)
+    {
+        this.editUserView = editUserView;
+    }
+
     public void setModel(Model model)
     {
         this.model = model;
+    }
+
+    public void onShowAllDeletedUsers()
+    {
+        model.loadDeletedUsers();
+        usersView.refresh(model.getModelData());
     }
 }

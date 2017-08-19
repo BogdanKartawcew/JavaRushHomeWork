@@ -4,8 +4,8 @@ import com.javarush.test.level36.lesson04.big01.bean.User;
 
 import java.util.List;
 
-public class ModelData {
-
+public class ModelData
+{
     private List<User> users;
     private User activeUser;
     private boolean displayDeletedUserList;
