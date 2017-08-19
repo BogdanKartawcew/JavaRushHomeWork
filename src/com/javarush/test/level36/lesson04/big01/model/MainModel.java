@@ -10,10 +10,7 @@ import java.util.List;
 public class MainModel implements Model {
 
     private ModelData modelData = new ModelData();
-    //Модель обращается к сервисам, создай поле UserService userService, инициализируй объектом
     private UserService userService = new UserServiceImpl();
-
-
 
     @Override
     public ModelData getModelData() {

@@ -14,7 +14,6 @@ public class ModelData {
     private boolean displayDeletedUserList;
 
 
-    //getters and setters
     public List<User> getUsers() {
         return users;
     }

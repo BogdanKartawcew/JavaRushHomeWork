@@ -4,9 +4,8 @@ import com.javarush.test.level36.lesson04.big01.model.Model;
 import com.javarush.test.level36.lesson04.big01.view.EditUserView;
 import com.javarush.test.level36.lesson04.big01.view.UsersView;
 
-/**
- * Этот класс будет получать запрос от клиента, оповещать Модель об этом, а Модель, в свою очередь, будет обновлять ModelData-у.
- */
+
+ /*Этот класс будет получать запрос от клиента, оповещать Модель об этом, а Модель, в свою очередь, будет обновлять ModelData-у.*/
 public class Controller {
 
     private Model model;
@@ -14,11 +13,10 @@ public class Controller {
     private EditUserView editUserView;
 
 
-    //methods;
     public void onShowAllUsers() {
         //обратиться к модели и инициировать загрузку юзеров
         model.loadUsers();
-        //Вью сама не умеет себя обновлять. Это делает Контроллер. Пойди в контроллер и добавь обновление данных во Вью. Напомню, данные хранятся в Моделе
+        //Пойди в контроллер и добавь обновление данных во Вью.
         usersView.refresh(model.getModelData());
     }
 
@@ -43,10 +41,6 @@ public class Controller {
     }
 
 
-
-
-
-    //setter
     public void setModel(Model model) {
         this.model = model;
     }
